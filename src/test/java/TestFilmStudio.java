@@ -5,9 +5,9 @@ import static org.junit.Assert.assertEquals;
 
 public class TestFilmStudio {
 
-    FilmStudio myStudio;
-    Movie movie1;
-    Movie movie2;
+    private FilmStudio myStudio;
+    private Movie movie1;
+    private Movie movie2;
 
     @Before
     public void before(){

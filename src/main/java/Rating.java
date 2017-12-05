@@ -10,6 +10,10 @@ public enum Rating {
     Rating(String output) {
         this.output = output;
     }
+
+    public String getOutput() {
+        return this.output;
+    }
 }
 
 

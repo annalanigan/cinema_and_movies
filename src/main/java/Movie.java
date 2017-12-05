@@ -9,7 +9,15 @@ public class Movie {
     }
 
 
+    public String getName() {
+        return name;
+    }
 
+    public Rating getRating() {
+        return rating;
+    }
 
-
+    public String prettyRating() {
+        return rating.getOutput();
+    }
 }
