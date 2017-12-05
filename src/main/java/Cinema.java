@@ -17,6 +17,14 @@ public class Cinema {
     }
 
     public void addMovie(Movie inputMovie) {
-        showings.add(inputMovie);
+        if (!cinemaFull()) {
+            showings.add(inputMovie);
+        }
     }
+
+    public boolean cinemaFull(){
+       return (movieCount() >= this.screens);
+    }
+
+
 }
