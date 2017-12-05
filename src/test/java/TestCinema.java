@@ -9,6 +9,7 @@ public class TestCinema {
     Movie movie1;
     Movie movie2;
     Movie movie3;
+    FilmStudio myStudio;
 
     @Before
     public void before(){
@@ -17,6 +18,7 @@ public class TestCinema {
         movie1 = new Movie("Moana", Rating.UNIVERSAL);
         movie2 = new Movie("Fantastic Beasts", Rating.TWELVE);
         movie3 = new Movie("Home Alone", Rating.PARENTALGUIDANCE);
+        myStudio = new FilmStudio();
     }
 
     @Test
@@ -43,5 +45,15 @@ public class TestCinema {
         myCinema2.addMovie(movie2);
         myCinema2.addMovie(movie3);
         assertEquals(2, myCinema2.movieCount());
+    }
+
+    @Test
+    public void buyMovieFromStudio(){
+        myStudio.addNewRelease(movie1);
+        myStudio.addNewRelease(movie2);
+        myCinema.buyMovie(myStudio, movie1);
+        assertEquals(1, myStudio.countReleases());
+        assertEquals(1, myCinema.movieCount());
+
     }
 }

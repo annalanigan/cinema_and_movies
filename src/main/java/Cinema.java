@@ -27,4 +27,10 @@ public class Cinema {
     }
 
 
+    public void buyMovie(FilmStudio studio, Movie movie) {
+        if (!cinemaFull()){
+            studio.sellNewRelease(movie);
+            addMovie(movie);
+        }
+    }
 }
