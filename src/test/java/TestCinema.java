@@ -19,11 +19,12 @@ public class TestCinema {
         assertEquals(0, myCinema.movieCount());
     }
 
-//    @Test
-//    public void canAddMovie(){
-//
-//    }
-//
+    @Test
+    public void canAddMovie(){
+        myCinema.addMovie(movie1);
+        assertEquals(1, myCinema.movieCount());
+    }
+
 //    @Test
 //    public void cinemaIsFull(){
 //

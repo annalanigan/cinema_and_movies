@@ -15,4 +15,8 @@ public class Cinema {
     public int movieCount() {
         return showings.size();
     }
+
+    public void addMovie(Movie inputMovie) {
+        showings.add(inputMovie);
+    }
 }
